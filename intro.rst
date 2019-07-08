@@ -8,7 +8,7 @@ Credits
 https://www.gter.it/
 
 
-The Lidar Tile Maker Plugin for QGIS and this related manual have been developed by Gter srl Innovazione in Geomatica GNSS e GIS.
+The **Lidar Tile Maker** Plugin for QGIS and this related manual have been developed by Gter srl Innovazione in Geomatica GNSS e GIS.
 
 
 
