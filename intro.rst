@@ -20,14 +20,16 @@ Both the plugin and the manual are licensed under a Creative Commons Attribution
 Purpose
 ------------------------------------------
 
-Il presente tutorial (in Italiano) ha lo scopo di guidare l'utente base nella gestione di dati lidar con QGIS a fini forestali. 
-Dopo una breve sezione introduttiva sulla tecnologia LIDAR e le sue principali applicazioni in ambito ambientale e non solo, si focalizzerà sul nuovo plugin realizzato per semplificare le procedure di calcolo del CHM a partire dai dati di DSM e DTM.
+The Lidar Tile Maker Plugin has been developed in order to make easier the use of the CHM from Lidar Plugin. The latter has been developed by Gter srl and funded by the 'Programma di sviluppo rurale per il Veneto 2014-2020' - Regione del Veneto - Direzione AdG FEASR e Foreste. It allows to compute the Canopy Height Model (CHM) starting from Lidar data, in particular Digital Surface Model (DSM)  and Digital Terrain Model (DTM).
 
-In conclusione si proveranno a capire come analizzare i risulati e procedere ad una loro riclassificazione e successiva vettorializzazione.
+The use of CHM from LIDAR plugin is based on a Tile Vector Layer which is automatically uploaded to the working Qgis project when the plugin icon is pressed. By default the tile vector layer, named **tile_dsm_dtm.gpkg**, contains data of Regione Veneto (Italy) which has founded its development. Obviously the **tile_dsm_dtm** layer can be modified by user including its own data.
+
+The **Lidar Tile Maker** Plugin allows users to create their own Tile Vector Layer with all the characteristics requested by the CHM from LIDAR Plugin. For instance, the plugin creates a **tile_dsm_dtm.gpkg** with all the necessary information stored in the attribute table. The table fields are automatically created and named so as to be used by the CHM from LIDAR Plugin.
+
+The final output is a file GeoPackage (**tile_dsm_dtm.gpkg**).
 
 
-
-Glossario
+Glossary
 ------------------------------------------
 
 * CHM: Canopy Height Model
