@@ -3,9 +3,9 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Tutorial: utilizzo di QGIS per la gestione di dati LIDAR forestali
+Manual: Lidar Tile Maker Plugin QGIS
 =====================================================================
-Contenuti:
+Subject:
 
 .. toctree::
 
