@@ -4,24 +4,20 @@ Introduction
 Credits
 ------------------------------------------
 
-.. image:: img/4ISTITUZIONALI.png
-https://psrveneto.it/
+.. image:: img/Gter.png
+https://www.gter.it/
 
 
-Iniziativa finanziata dal Programma di sviluppo rurale per il Veneto 2014-2020 
-
-Organismo responsabile dell’informazione: GTER Innovazione in Geomatica, GNSS e GIS 
-
-Autorità di gestione: Regione del Veneto - Direzione AdG FEASR e Foreste 
+The Lidar Tile Maker Plugin for QGIS and this related manual have been developed by Gter srl Innovazione in Geomatica GNSS e GIS.
 
 
 
-Il tutorial è stato realizzato da `Gter srl`_  e distribuito con licenza https://creativecommons.org/licenses/by/4.0/
+Both the plugin and the manual are licensed under a Creative Commons Attribution 4.0 International License https://creativecommons.org/licenses/by/4.0/
 
 
 
 
-Scopo del Tutorial
+Purpose
 ------------------------------------------
 
 Il presente tutorial (in Italiano) ha lo scopo di guidare l'utente base nella gestione di dati lidar con QGIS a fini forestali. 
