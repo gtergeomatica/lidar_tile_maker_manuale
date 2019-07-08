@@ -18,6 +18,10 @@ The main and mandatory input of the **Lidar Tile Maker** Plugin are:
 
 NB. If a tile_dsm_dtm.gpkg file already exists in the provided output folder, it will be automatically overwritten.
 
+Data Preparation
+--------------------------------------------
+TO DO
+
 Graphical User Interface
 --------------------------------------------
 All the required input parameters can be provided by users through the graphical user interface (GUI) of the **Lidar Tile Maker** Plugin that is shown pressing its icon in the toolbar.
