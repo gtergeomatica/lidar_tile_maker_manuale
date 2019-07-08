@@ -19,7 +19,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = u'Tutorial - Utilizzo di QGIS per la gestione di dati LIDAR forestali'
+project = u'Manual - Lidar Tile Maker Plugin - QGIS'
 copyright = u'2019, Gter srl'
 author = u'Gter srl'
 
@@ -65,7 +65,7 @@ master_doc = 'index'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = u'it'
+language = u'en'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -137,7 +137,7 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'tutorial_qgis_lidar'
+htmlhelp_basename = 'manual_qgis_lidarTileMaker'
 
 
 from sphinx.builders.html import StandaloneHTMLBuilder
@@ -174,7 +174,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'tutorial_QGIS_lidar.tex', u'Tutorial - Utilizzo di QGIS per la gestione di dati LIDAR forestali',
+    (master_doc, 'manual_QGIS_lidarTileMaker.tex', u'Manual - Lidar Tile Maker Plugin - QGIS',
      u'Gter srl', 'manual'),
 ]
 
@@ -184,7 +184,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'tutorial_QGIS_lidar', u'Tutorial - Utilizzo di QGIS per la gestione di dati LIDAR forestali',
+    (master_doc, 'manual_QGIS_lidarTileMaker', u'Manual - Lidar Tile Maker Plugin - QGIS',
      [author], 1)
 ]
 
@@ -195,8 +195,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'tutorial_QGIS_lidar', u'Tutorial - Utilizzo di QGIS per la gestione di dati LIDAR forestali',
-     author, 'tutorial_QGIS_lidar', 'One line description of project.',
+    (master_doc, 'manual_QGIS_lidarTileMaker', u'Manual - Lidar Tile Maker Plugin - QGIS',
+     author, 'manual_QGIS_lidarTileMaker', 'One line description of project.',
      'Miscellaneous'),
 ]
 
