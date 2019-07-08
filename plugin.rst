@@ -16,6 +16,8 @@ The main and mandatory input of the **Lidar Tile Maker** Plugin are:
 * the Coordinates Reference System (CRS) of the DTM/DSM file
 * an output path folder where the plugin will save the final tile_dsm_dtm.gpkg file
 
+NB. The input DSM folder and the input DTM folder must belong to the same flight campaign.
+
 NB. If a tile_dsm_dtm.gpkg file already exists in the provided output folder, it will be automatically overwritten.
 
 Data Preparation
@@ -28,8 +30,8 @@ All the required input parameters can be provided by users through the graphical
 
 .. image:: img/gui.png
 
-* **1 - Select an AOI:** da qui è possibile selezionare il layer vettoriale contenente le geometrie dell'are di interesse per la quale si desidera calcolare il CHM. Il menù a tendina elenca tutti i layer vettoriali caricati all'interno del progetto corrente, è quindi necessario che il vettoriale contenete l'AOI sia stato già caricato nel progetto Qgis.
-* **2 - Using selected features:** qualora il layer dell'AOI selezionato avesse geometrie selezionate la check box si attiva. Checkandola verranno quindi utilizzate le sole geometrie selezionate e quindi verranno selezionate tutte le tile (dal layer tile_dsm_dtm) che intersecano le sole geometrie selezionate nel layer di AOI selezionato al punto 1. Se la check box non viene spuntata verrà utilizzato per l'intersezione l'intero layer. Nel caso in cui nel layer di AOI selezionato non siano presenti geometrie selezionate la check box sarà disattivata.
+* **1 - Input DSM folder:** select the folder containing all the DSM file of the desired campaign using the Browse button. Once selected, the path to the selected folder will be shown in the related line text widget. NB. If no input DSM folder is provided, the plugin will return an error message, the process will be stopped and the user will be able to provide the input DSM folder.
+* **2 - Input DTM folder:** select the folder containing all the DTM file of the desired campaign using the Browse button. Once selected, the path to the selected folder will be shown in the related line text widget. NB. If no input DTM folder is provided, the plugin will return an error message, the process will be stopped and the user will be able to provide the input DTM folder.
 * **3 - Select di autority:** tra le varie informazioni immagazzinate nella tabella del layer delle tile (tile_dsm_dtm) è presente anche l'Ente che ha gestito la campagna di volo. Il menù a tendina elenca tutti gli enti indicati all'interno della tabella, è possibile quindi selezionare l'ente desiderato e di conseguenza visualizzare nel menù a tendina, di cui al punto 4, le sole campagne di volo gestite dall'ente selezionato. NB: in questo momento questa funzione non è ancora attiva, verrà integrata nel codice nei giorni seguenti al corso.
 * **4 - Select a campaign:** sulla base dell'ente selezionato al punto 3, il menù a tendina elencherà tutte le campagne di volo gestite dall'ente. Sarà quindi possibile selezionare la campagna desiderata per la quale calcolare il CHM. NB: al momento il menù a tendina elenca tutte le campagne presenti nella tabella degli attributi associata al layer delle tile  (tile_dsm_dtm) senza il filtro sulla base dell'ente. Questa funzione sarà implementata nei prossimi giorni come già detto al punto 3.
 * **5 - Clip file name:** selezionando un'are di interesse è necessario indicare un nome per il raster che conterrà il CHM ritagliato sul confine dell'area AOI selezionata. E' necessario indicare solo il nome senza l'estensione del file che verrà aggiunta automaticamente sulla base del formato di output scelto dall'utente. Qualora l'utente non indicasse il nome per il clip, il plugin restituirà un warning in cui si avvisa l'utente che verrà dato al file un nome di default (es. clip.*). **NB: non inserire nel nome del file spazi o caratteri speciali.**
