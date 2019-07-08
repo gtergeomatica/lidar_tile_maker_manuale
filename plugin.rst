@@ -1,6 +1,10 @@
 The Lidar Tile Maker Plugin
 ==================================
-Il Plugin CHM from LIDAR consente la generazione del Canopy Height Model (CHM) a partire da dati Lidar, in particolare DTM e DSM (First Impulse).
+The **Lidar Tile Maker** Plugin creates the tile vector layer, named *tile_dsm_dtm*, to be used as input for the CHM from LIDAR Plugin. As already mentioned in the introduction of the manual, the CHM from LIDAR plugin automatically uploads and uses the *tile_dsm_dtm* vector layer, which contains data of Regione Veneto, but it can be replaced with the one created by the **Lidar Tile Maker** Plugin.
+It creates a GeoPackage file, automatically named *tile_dsm_dtm.gpkg*, which contains the polygons of tiles computed from the extensions of the DTM/DSM file given by users as input. Also the related attribute table is automatically created with all the required fields and filled with all the necessary information taken from input parameters provided by users or from the data themselves.
+
+**NB. In order to use the tile_dsm_dtm.gpkg file as input for the CHM from LIDAR plugin, DO NOT rename the file and the Qgis layer and DO NOT delete or rename any field of the related attribute table.**
+
 
 I principali input del plugin sono i file DSM e DTM derivanti dalle diverse campagne di volo, dai quali verrà calcolato il CHM, e un file vettoriale (formato GeoPackage) contenente le geometrie degli squadri (tile) che compongono le diverse campagne di rilievo. In particolare quest ultimo viene automaticamente caricato all'interno del progetto QGIS all'avvio del plugin. Qualora invece fosse stato già caricato durante una sessione di lavoro precedente non sarà nuovamente caricato ma verrà semplicemente reso attivo quello già presente.
 Il file vettoriale delle tile, nominato *tile_dsm_dtm*, contiene nella tabella alfanumerica associata tutte le informazioni necessarie al reperimento dei relativi file DSM e DTM per il calcolo del CHM (percorso ai file, nome del file, nome della campagna, sistema di riferimento, ecc.). Il plugin quindi, sulla base dei parametri di input richiesti dall'utente, sarà in grado di recuperare automaticamente i DSM e DTM delle tile selezionate leggendo tutte le informazioni necessarie (percorso + nome file) dalla tabella associata al file tile_dsm_dtm.
