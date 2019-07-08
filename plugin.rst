@@ -1,4 +1,4 @@
-Il plugin CHM from LIDAR
+The Lidar Tile Maker Plugin
 ==================================
 Il Plugin CHM from LIDAR consente la generazione del Canopy Height Model (CHM) a partire da dati Lidar, in particolare DTM e DSM (First Impulse).
 
