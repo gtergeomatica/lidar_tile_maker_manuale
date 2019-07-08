@@ -1,4 +1,4 @@
-Introduzione
+Introduction
 ==================
 
 Credits
