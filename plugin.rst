@@ -5,7 +5,7 @@ It creates a GeoPackage file, automatically named *tile_dsm_dtm.gpkg*, which con
 
 **NB. In order to use the tile_dsm_dtm.gpkg file as input for the CHM from LIDAR plugin, DO NOT rename the file and the Qgis layer and DO NOT delete or rename any field of the related attribute table.**
 
-The DTM and DSM data deriving from a LIDAR flight campaign are divided into tiles. The **Lidar Tile Maker** Plugin computes the extention of each DTM tile and of its related DSM tile given as input. If the two tiles, DTM and related DSM, have the same extention, the plugin creates the tile polygon. The final output is a vector layer containing all the polygons corresponding to the extension of each tile DTM/DSM given as input.
+| The DTM and DSM data deriving from a LIDAR flight campaign are divided into tiles. The **Lidar Tile Maker** Plugin computes the extention of each DTM tile and of its related DSM tile given as input. If the two tiles, DTM and related DSM, have the same extention, the plugin creates the tile polygon. The final output is a vector layer containing all the polygons corresponding to the extension of each tile DTM/DSM given as input.
 | The plugin creates the corresponding tile polygon only if both DTM and DSM exist and if they have the same extention. Otherwise the tool returns a warning message.
 
 The plugin works for a single LIDAR flight campaign. In case of several campaigns, the plugin has to be run for each campaign and it will create the corrisponding tile vector file. Then the tile vector layers have to be merged in order to obtain a single *tile_dsm_dtm.gpkg* file with all the tile polygons of each campaign to be used as input of the CHM from LIDAR plugin.
