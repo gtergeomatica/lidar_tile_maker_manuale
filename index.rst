@@ -10,9 +10,7 @@ Contenuti:
 .. toctree::
 
   intro
-  lidar
   plugin
-  post_pro
   
 
 
