@@ -69,7 +69,7 @@ All the required input parameters can be provided by users through the graphical
 Example
 --------------------------------------------
 
-DSM and DTM file are respectively stored in the folder named DSM and in the folder named DTM. The path to the DSM folder is 'C:\\Users\\user\\Documents\\dataset\\campaign_1\\DSM', where '*C:\\Users\\user\\Documents\\dataset\\*' is the base path that will be stored in the P_BASE field, '*campaign_1*' is the flight campaign folder and it will be stored in the P_CAMPAGNA field and '*\\DSM*' is the name of the folder containing the DSM file and it will be stored in the P_DSM field (in the same way for the DTM, P_BASE and P_CAMPAGNA will be obviously the same while the name of the foldere containing the DTM file '*\\DTM*' will be stored in the P_DTM field).
+DSM and DTM file are respectively stored in the folder named DSM and in the folder named DTM. The path to the DSM folder is 'C:\\Users\\user\\Documents\\dataset\\campaign_1\\DSM', where '*C:\\Users\\user\\Documents\\dataset\\*' is the base path that will be stored in the P_BASE field, '*campaign_1*' is the flight campaign folder and it will be stored in the P_CAMPAGNA field and '*\\DSM*' is the name of the folder containing the DSM file and it will be stored in the P_DSM field (in the same way for the DTM, P_BASE and P_CAMPAGNA will be obviously the same while the name of the folder containing the DTM file '*\\DTM*' will be stored in the P_DTM field).
 
 .. image:: img/folder.png
 
