@@ -86,3 +86,5 @@ In this case no CRS for the Tile Vector Layer has been selected hence the plugin
 The final result is a vector layer named tile_dsm_dtm with the tile polygons corresponding to the extension of each DSM/DTM file given as input. The attribute table has been automatically filled with the values retrived from the input parameters and the file themselves.
 
 .. image:: img/final_res.png
+
+**NB.** As already mentioned, the **Lidar Tile Maker** Plugin works for a single flight campaign. If you have several campaigns you have to run the plugin for each of them and then merge the obtained *tile_dsm_dtm.gpkg*. The output of the merge process must be a GeoPackage file named *tile_dsm_dtm.gpkg* and it can be used as input of the CHM from LIDAR plugin. Just load it in the working QGIS project befour launching the the CHM from LIDAR plugin.
