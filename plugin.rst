@@ -83,7 +83,7 @@ Press 'OK' button
 
 In this case no CRS for the Tile Vector Layer has been selected hence the plugin returns a warning message to advise user that the DSM/DTM CRS will be used for the *tile_dsm_dtm.gpkg* file
 
-The final result is a vector layer named tile_dsm_dtm with the tile polygons corresponding to the extension of each DSM/DTM file given as input. The attribute table has been automatically filled with the values retrived from the input parameters and the file themselves.
+The final result is a vector layer named tile_dsm_dtm with the tile polygons corresponding to the extension of each DSM/DTM file found in the DSM and DTM folders given as input. The attribute table has been automatically filled with the values retrived from the input parameters and the file themselves.
 
 .. image:: img/final_res.png
 
