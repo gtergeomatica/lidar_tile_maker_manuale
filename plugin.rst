@@ -9,8 +9,8 @@ It creates a GeoPackage file, automatically named *tile_dsm_dtm.gpkg*, which con
 * SR_EPSG - the EPSG code of the DSM/DTM CRS given as input
 * P_BASE - the base path to the folder containing the DSM and DTM file (see section 'Data Preparation') taken from the DSM/DTM path given as input
 * P_CAMPAGNA - the name of the folder of the flight campaign (see section 'Data Preparation') taken from the DSM/DTM path given as input
-* P_DTM - the name of the folder containing the DTM file (see section 'Data Preparation') taken from the DSM/DTM path given as input
-* P_DSM - the name of the folder containing the DSM file (see section 'Data Preparation') taken from the DSM/DTM path given as input
+* P_DTM - the name of the folder containing the DTM file (see section 'Data Preparation') taken from the DTM path given as input
+* P_DSM - the name of the folder containing the DSM file (see section 'Data Preparation') taken from the DSM path given as input
 * N_DTM - the name of each DTM file automatically retrived from from the DTM path folder given as input
 * N_DSM - the name of each DSM file automatically retrived from from the DSM path folder given as input
 * P_CHM - this field will remain empty, it will be filled by the CHM from LIDAR Plugin with the path to the CHM file
