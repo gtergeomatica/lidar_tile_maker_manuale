@@ -22,7 +22,9 @@ NB. If a tile_dsm_dtm.gpkg file already exists in the provided output folder, it
 
 Data Preparation
 --------------------------------------------
-TO DO
+Before running the **Lidar Tile Maker** Plugin, DSM and DTM data have to be organised in folders in order to allow the plugin to retrieve all the necessary information about the path of DSM and DTM data to be stored in the tile vector layer attribute table. This information will be then used by the CHM from LIDAR plugin to compute the CHM from the provided DSM and DTM.
+
+.. image:: img/data.png
 
 Graphical User Interface
 --------------------------------------------
