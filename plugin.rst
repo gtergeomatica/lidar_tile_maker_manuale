@@ -26,6 +26,8 @@ Before running the **Lidar Tile Maker** Plugin, DSM and DTM data have to be orga
 
 .. image:: img/data.png
 
+All DSM data deriving from a certain flight campaign (e.g my_campaign) must be stored in a single folder with a certain name (e.g dsm_folder). In the same way, all DTM data deriving from the same campaign (e.g my_campaign) must be stored in a single folder with a certain name (e.g dtm_folder). Both the dsm_folder and the dtm_folder must be contained in another folder whose name should correspond with the one of the campaign.
+
 Graphical User Interface
 --------------------------------------------
 All the required input parameters can be provided by users through the graphical user interface (GUI) of the **Lidar Tile Maker** Plugin that is shown pressing its icon in the toolbar.
