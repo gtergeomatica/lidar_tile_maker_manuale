@@ -1,7 +1,24 @@
 The Lidar Tile Maker Plugin
 ==================================
 The **Lidar Tile Maker** Plugin creates the tile vector layer, named *tile_dsm_dtm*, to be used as input for the CHM from LIDAR Plugin. As already mentioned in the introduction of the manual, the CHM from LIDAR plugin automatically uploads and uses the *tile_dsm_dtm* vector layer, which contains data of Regione Veneto, but it can be replaced with the one created by the **Lidar Tile Maker** Plugin.
-It creates a GeoPackage file, automatically named *tile_dsm_dtm.gpkg*, which contains the polygons of tiles computed from the extensions of the DTM/DSM file given by users as input. Also the related attribute table is automatically created with all the required fields and filled with all the necessary information taken from input parameters provided by users or from the data themselves.
+It creates a GeoPackage file, automatically named *tile_dsm_dtm.gpkg*, which contains the polygons of tiles computed from the extensions of the DTM/DSM file given by users as input. Also the related attribute table is automatically created with all the required fields and filled with all the necessary information taken from input parameters provided by users or from the data themselves. The fields of the attribute table of the *tile_dsm_dtm.gpkg* file are:
+
+* ENTE - the authority given as input
+* ANNO - the year given as input
+* FORMATO - the format file of the DSM/DTM file, it is automatically taken from the DSM/DTM file stored in the folders given as input
+* SR_EPSG - the EPSG code of the DSM/DTM CRS given as input
+* P_BASE - the base path to the folder containing the DSM and DTM file (see section 'Data Preparation') taken from the DSM/DTM path given as input
+* P_CAMPAGNA - the name of the folder of the flight campaign (see section 'Data Preparation') taken from the DSM/DTM path given as input
+* P_DTM - the name of the folder containing the DTM file (see section 'Data Preparation') taken from the DSM/DTM path given as input
+* P_DSM - the name of the folder containing the DSM file (see section 'Data Preparation') taken from the DSM/DTM path given as input
+* N_DTM - the name of each DTM file automatically retrived from from the DTM path folder given as input
+* N_DSM - the name of each DSM file automatically retrived from from the DSM path folder given as input
+* P_CHM - this field will remain empty, it will be filled by the CHM from LIDAR Plugin with the path to the CHM file
+* N_CHM - this field will remain empty, it will be filled by the CHM from LIDAR Plugin with the name of the CHM file
+* EPSG_CHM - this field will remain empty, it will be filled by the CHM from LIDAR Plugin with the EPSG code of the CHM file CRS
+* RISOLUZ_RA - the resolution of the DSM and DTM file automatically retrived by the DSM/DTM file themselves
+
+All the values stored in the attribute table will be then used by the CHM from LIDAR plugin.
 
 **NB. In order to use the tile_dsm_dtm.gpkg file as input for the CHM from LIDAR plugin, DO NOT rename the file and the Qgis layer and DO NOT delete or rename any field of the related attribute table.**
 
