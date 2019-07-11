@@ -1,0 +1,275 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="it" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="it" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Il Plugin Lidar Tile Maker &mdash; Manual - Lidar Tile Maker Plugin - QGIS 1.0 documentazione</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Indice" href="genindex.html" />
+    <link rel="search" title="Cerca" href="search.html" />
+    <link rel="prev" title="Introduzione" href="intro.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Manual - Lidar Tile Maker Plugin - QGIS
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduzione</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Il Plugin Lidar Tile Maker</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#data-preparation">Preparazione dei dati</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#graphical-user-interface">L’interfaccia grafica</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example">Esempio</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Manual - Lidar Tile Maker Plugin - QGIS</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Il Plugin Lidar Tile Maker</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/plugin.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="the-lidar-tile-maker-plugin">
+<h1>Il Plugin Lidar Tile Maker<a class="headerlink" href="#the-lidar-tile-maker-plugin" title="Link a questa intestazione">¶</a></h1>
+<p>Il Plugin <strong>Lidar Tile Maker</strong> un layer vettoriale di tile, nominato <em>tile_dsm_dtm</em>, da utilizzare come input del Plugin CHM from LIDAR. Come già menzionato nell’introduzione del manuale, il Plugin CHM from LIDAR carica e utilizza automaticamente il layer vettoriale <em>tile_dsm_dtm</em>, che contiene i dati di Regione Veneto, ma può essere sostituito con quello creato dal Plugin <strong>Lidar Tile Maker</strong>. Il plugin crea un file GeoPackage, automaticamente nominato <em>tile_dsm_dtm.gpkg</em>, che contiene i poligoni delle tiles calcolati a partire dalle estensioni dei file DTM/DSM dati in input dall’utente. Anche la relativa tabella degli attributi è automaticamente creata con tutti campi richiesti e popolata con tutte le informazioni necessarie prese direttamente dai parametri in input forniti dall’utente o dai dati stessi. I campi della tabella attributi del file <em>tile_dsm_dtm.gpkg</em> sono:</p>
+<ul class="simple">
+<li><p>ENTE - l’ente dato in input</p></li>
+<li><p>ANNO - l’anno datto in input</p></li>
+<li><p>FORMATO - il formato dei file DSM/DTM, è automaticamente estratto dai file DSM/DTM che si trovano nelle cartelle date in input</p></li>
+<li><p>SR_EPSG - il codice EPSG del CRS dei file DSM/DTM CRS dato in input</p></li>
+<li><p>P_BASE - il percorso base alle cartelle che contengono i file DSM e DTM (si veda la sezione “Preparazione dei dati”) estratto dal percorso ai file DSM/DTM dato in input</p></li>
+<li><p>P_CAMPAGNA - il nome della cartella della campagna di volo (si veda la sezione “Preparazione dei dati”) estratto dal percorso ai file DSM/DTM dato in input</p></li>
+<li><p>P_DTM - Il nome della cartella che contiene i file DTM (si veda la sezione “Preparazione dei dati”) estratto dal percorso ai file DTM dato in input</p></li>
+<li><p>P_DSM - Il nome della cartella che contiene i file DSM (si veda la sezione “Preparazione dei dati”) estratto dal percorso ai file DTM dato in input</p></li>
+<li><p>N_DTM - il nome di ogni file DTM automaticamente estratto dai file contenuti nella cartella DTM data in input input</p></li>
+<li><p>N_DSM - il nome di ogni file DSM automaticamente estratto dai file contenuti nella cartella DSM data in input input</p></li>
+<li><p>P_CHM - questo campo rimane vuoto, sarà popolato dal Plugin CHM from LIDAR con il percorso ai file CHM generati</p></li>
+<li><p>N_CHM - questo campo rimane vuoto, sarà popolato dal Plugin CHM from LIDAR con il nome dei file CHM generati</p></li>
+<li><p>EPSG_CHM - questo campo rimane vuoto, sarà popolato dal Plugin CHM from LIDAR con il codice EPSG dei file CHM generati</p></li>
+<li><p>RISOLUZ_RA - la risoluzione dei file DSM e DTM automaticamente estratta dai file stessi</p></li>
+</ul>
+<p>Tutti i valori salvati nella tabella degli attributi saranno poi utilizzati dal Plugin CHM from LIDAR.</p>
+<p><strong>NB. Per poter utilizzare il file tile_dsm_dtm.gpkg file come input del plugin CHM from LIDAR, NON rinominare il file e il layer Qgis e NON eliminare o rinominare alcun campo della tabella degli attributi.</strong></p>
+<p>I DTM e DSm derivanti da una campagna di volo LIDAR sono divisi in tiles. Il Plugin <strong>Lidar Tile Maker</strong> calcola l’estensione di file DTM e del relativo DSM dato in input. Se i due file, DTM e relativo DSM, hanno la stessa estensione, il plugin crea il poligono della tile. L’output finale è un layer vettoriale che contiene tutti i poligoni corrispondenti all’estensione di ogni file DTM/DSM dati in input. Il plugin crea i poligoni delle tile solo se esistono entrambi i file, DTM e DSM, e se entrambi hanno la stessa estensione. Altrimenti il plugin restituisce un messaggio di warning.</p>
+<p>Il plugin funziona per singola campagna di volo. In caso di più campagne, il plugin deve essere lanciato per ciascuna di esse e creerà il corrispondente layer vettoriale di tile per ogni campagna. Successivamente i layers vettoriali devono essere uniti così da ottenere un unico file <em>tile_dsm_dtm.gpkg</em> con tutti i poligoni delle tile di ogni campagna da utilizzare come input del Plugin CHM from LIDAR.</p>
+<p>Gli input obbligatori del Plugin <strong>Lidar Tile Maker</strong> sono:</p>
+<ul class="simple">
+<li><p>la cartella contenente i file DSM della campagna</p></li>
+<li><p>la cartella contenente i file DTM della campagna</p></li>
+<li><p>il sistema di riferimento dei file DTM/DSM</p></li>
+<li><p>il percorso a una cartella  di output in cui salvare il file tile_dsm_dtm.gpkg</p></li>
+</ul>
+<p>NB. I file DSM e DTM devono appartenere alla stessa campagna di volo</p>
+<p>NB. Se nella cartella di output data esiste già un file dsm_dtm.gpkg, sarà automaticamente sovrascritto.</p>
+<div class="section" id="data-preparation">
+<h2>Preparazione dei dati<a class="headerlink" href="#data-preparation" title="Link a questa intestazione">¶</a></h2>
+<p>Prima di utilizzare il Plugin <strong>Lidar Tile Maker</strong>, i dati, DSM and DTM, devono essere organizzati in cartelle per permettere al plugin di estrarre tutte informazioni necessarie circa il percorso ai file da inserire nella tabella degli attributi del layer delle tile. Queste informazioni saranno poi utilizzate dal Plugin CHM from LIDAR per calcolare il CHM dai file DSM e DTM dati.</p>
+<img alt="_images/data.png" src="_images/data.png" />
+<p>Tutti i DSM derivanti da una certa campagna di volo (es. mia_campagna) devono essere salvati in una singola cartella con un certo nome (es. cartella_dsm). Allo stesso modo, tutti i DTM appartenenti alla stessa campagna (es. mia_campagna) devono essere salvati in una singola cartella con un certo nome (es. cartella_dtm). Sia la cartella_dsm che la cartella_dtm devono essere inserite in un’altra cartella il cui nome dovrebbe corrispondere a quello della campagna (i.e. mia_campagna). Ovviamente la cartella della campagna può essere creata ovunque (es. C:\Users\user\Documents\whatever\).</p>
+<p>Il percorso alla cartella della campagna (i.e. C:\Users\user\Documents\whatever\) sarà salvato nel campo specifico (P_BASE) della tabella degli attributi del file <em>tile_dsm_dtm.gpkg</em>. Il nome della cartella della campagna (i.e. mia_campagna) sarà salvato nel campo specifico della tabella (P_CAMPAGNA) mentre il nome della cartella dei file DSM (i.e. cartella_dsm) e il nome della cartella dei file DTM (i.e. cartella_dtm) saranno salvati in due diversi campi della tabella degli attributi rispettivamente chiamati P_DSM e P_DTM. Unendo i valori dei tre campi si otterrà il percorso ai file DSM e DTM. Questi percorsi uniti ai nomi dei file DSM e DTM, rispettivamente salvati in altri due campi della tabella degli attributi (N_DSM e N_DTM), saranno utilizzati dal Plugin CHM from LIDAR per recuperare i dati da cui calcolare il CHM.</p>
+</div>
+<div class="section" id="graphical-user-interface">
+<h2>L’interfaccia grafica<a class="headerlink" href="#graphical-user-interface" title="Link a questa intestazione">¶</a></h2>
+<p>Tutti parametri in input possono essere specificati dall’utente attraverso l’interfaccia grafica del Plugin <strong>Lidar Tile Maker</strong> che si apre cliccando sull’icona del plugin nella toolbar.</p>
+<img alt="_images/gui.png" src="_images/gui.png" />
+<ul class="simple">
+<li><p><strong>1 - Cartella dei DSM:</strong> selezionare la cartella contenente i file DSM della campagna utilizzando il bottone Cerca. Una volta selezionata, il percorso alla cartella sarà mostrato nel form di testo relativo al bottone. NB. Se non viene salazionata alcuna cartella, il plugin darà un messaggio di errore, il processo viene stoppato e l’utente potrà selezionare la cartella.</p></li>
+<li><p><strong>2 - Cartella dei DTM:</strong> selezionare la cartella contenente i file DTM della campagna utilizzando il bottone Cerca. Una volta selezionata, il percorso alla cartella sarà mostrato nel form di testo relativo al bottone. NB. Se non viene salazionata alcuna cartella, il plugin darà un messaggio di errore, il processo viene stoppato e l’utente potrà selezionare la cartella.</p></li>
+<li><p><strong>3 - DSM/DTM CRS:</strong> il bottone apre la finestra per la selezione del SR di Qgis ed è necessario selezionare il SR dei file DSM/DTM. Questo parametro è obbligatorio, se non viene selezionato alcun SR per i file DSM/DTM, il plugin restituisce un messaggio di errore, il processo si blocca e l’utente può selezione l’SR dei file DSM/DTM. NB. Attenzione a selezionare l’SR corretto, altrimenti il risultato finale potrebbe non essere corretto.</p></li>
+<li><p><strong>4 - Ente:</strong> digitare il nome dell’ente che ha eseguito il rilievo LIDAR nel form di testo. Questa informazione sarà automaticamente salvata nel campo specifico della tabella degli attributi. Non è obbligatorio ma è richiesto se si vuole utilizzare il layer <em>tile_dsm_dtm</em> come input del Plugin CHM from LIDAR.</p></li>
+<li><p><strong>5 - Anno:</strong> digitare l’anno in cui è stato fatto il rilievo LIDAR. Questa informazione sarà automaticamente salvata nel campo specifico della tabella degli attributi. Non è obbligatorio ma è richiesto se si vuole utilizzare il layer <em>tile_dsm_dtm</em> come input del Plugin CHM from LIDAR.</p></li>
+<li><p><strong>6 - Cartella di Output:</strong> selezionare la cartella in cui si vuole salvare il file <em>tile_dsm_dtm.gpkg</em> utilizzando il bottone Cerca. Una volta selezionata, il percorso alla cartella sarà mostrato nel form di testo relativo al bottone. NB. Se non viene selezionata alcuna cartella di output, il plugin restituirà un messaggio di errore, il processo si blocca e l’utente potrà selezionare la cartella. Attenzione, non utilizzare spazi e/o caratteri speciali nel nome e nel percorso della cartella di output.</p></li>
+<li><p><strong>7 - CRS Squadri:</strong> il bottone apre la finestra per la selezione del SR di Qgis ed è possibile selezionare l’SR del layer vettoriale delle tile. A differenza dell’SR dei DSM/DTM, questo parametro non è obbligatorio. Se non viene selezionato alcun SR il file <em>tile_dsm_dtm.gpkg</em> sarà creato utilizzando l’SR dei file DSM/DTM.</p></li>
+<li><p><strong>8 - Messaggi di Log:</strong> tutti i messaggi di warning o di errore compariranno in questa area durante il processo.</p></li>
+<li><p><strong>9 - Pulisci Log:</strong> il bottone pulisce l’area dei messaggi di Log rimuovendo eventuali messaggi di processi precedenti.</p></li>
+<li><p><strong>10 - Guida:</strong> il bottone apre questo manuale in un web browser.</p></li>
+<li><p><strong>11- OK:</strong> il bottone lancia il processo. Come già detto, se il plugin restituisce un messaggio di errore il processo viene bloccato e l’utente potrà inserire o modificare i parametri in input, premendo nuovamente il bottone OK il processo verrà rilanciato.</p></li>
+<li><p><strong>12 - Chiudi:</strong> il bottone chiude l’interfaccia grafica del plugin e tutti i parametri in input sono riinizializzati.</p></li>
+</ul>
+</div>
+<div class="section" id="example">
+<h2>Esempio<a class="headerlink" href="#example" title="Link a questa intestazione">¶</a></h2>
+<p>I file DSM e DTM sono rispettivamente salvati in una cartella chiamata DSM e in una cartella chiamata DTM. Il percorso alla cartella DSM folder è “C:\Users\user\Documents\dataset\campaign_1\DSM”, dove “<em>C:\Users\user\Documents\dataset\</em>” è il percorso base che sarà salvato nel campo P_BASE, “<em>campagna_1</em>” è la cartella della campagna di volo e sarà salvata nel campo P_CAMPAGNA e “<em>\DSM</em>” è il nome della cartella contenente i file DSM e sarà salvata nel campo P_DSM (allo stesso modo per il DTM, P_BASE e P_CAMPAGNA saranno ovviamente gli stessi mentre il nome della cartella che contiene i file DTM “<em>\DTM</em>” sara salvato nel campo P_DTM).</p>
+<img alt="_images/folder.png" src="_images/folder.png" />
+<p>Impostare i parametri in input dall’interfaccia grafica del Plugin <strong>Lidar Tile Maker</strong></p>
+<img alt="_images/gui_param.png" src="_images/gui_param.png" />
+<p>Premere il bottone OK</p>
+<img alt="_images/end_process.png" src="_images/end_process.png" />
+<p>In questo caso non è stato selezionato alcun SR per il layer vettoriale delle tile quindi il plugin restituirà un messaggio di warning per avvisare l’utente che verrà utilizzato l’SR dei DSM/DTM per creare il file <em>tile_dsm_dtm.gpkg</em></p>
+<p>il risultato finale è un layer vettoriale nominato tile_dsm_dtm con i poligoni delle tile corrispondenti all’estensione dei DSM/DTM trovati nelle cartelle del DSM e DTM date in input. La tabella degli attributi è stata automaticamente riempita con i valori recuperati dai parametri in input e dai file stessi.</p>
+<img alt="_images/final_res.png" src="_images/final_res.png" />
+<p><strong>NB.</strong> Come già detto, il Plugin <strong>Lidar Tile Maker</strong> funziona per singola campagna di volo. Se si hanno diverse campagna di volo si deve lanciare il plugin per ciascuna campagna a successivamente unire i file <em>tile_dsm_dtm.gpkg</em> ottenuti. L’output del processo di unione deve essere un file GeoPackage chiamato <em>tile_dsm_dtm.gpkg</em> e può essere quindi utilizzato come input del plugin CHM from LIDAR. Basta caricarlo nel progetto QGIS corrente prima di premere l’icona del plugin CHM from LIDAR.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="intro.html" class="btn btn-neutral float-left" title="Introduzione" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Gter srl
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
