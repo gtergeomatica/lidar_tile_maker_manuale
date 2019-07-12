@@ -1,0 +1,26 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Gter srl
+# This file is distributed under the same license as the Manual - Lidar Tile Maker Plugin - QGIS package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Manual - Lidar Tile Maker Plugin - QGIS \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-07-12 11:23+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../index.rst:7
+msgid "Manual: Lidar Tile Maker Plugin QGIS"
+msgstr ""
+
+#: ../../index.rst:8
+msgid "Subject:"
+msgstr ""
+

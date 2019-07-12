@@ -1,0 +1,132 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Gter srl
+# This file is distributed under the same license as the Manual - Lidar Tile
+# Maker Plugin - QGIS package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Manual - Lidar Tile Maker Plugin - QGIS \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-07-11 12:11+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: ../../intro.rst:2
+msgid "Introduction"
+msgstr "Introduzione"
+
+#: ../../intro.rst:5
+msgid "Credits"
+msgstr "Credits"
+
+#: ../../intro.rst:8
+msgid "https://www.gter.it/"
+msgstr "https://www.gter.it/"
+
+#: ../../intro.rst:11
+msgid ""
+"The **Lidar Tile Maker** Plugin for QGIS and this related manual have "
+"been developed by Gter srl Innovazione in Geomatica GNSS e GIS."
+msgstr ""
+"Il Plugin QGIS **Lidar Tile Maker** e questo manuale sono stati"
+"sviluppati da Gter srl Innovazione in Geomatica GNSS e GIS."
+
+#: ../../intro.rst:15
+msgid ""
+"Both the plugin and the manual are licensed under a Creative Commons "
+"Attribution 4.0 International License "
+"https://creativecommons.org/licenses/by/4.0/"
+msgstr ""
+"Sia il Plugin che il manuale sono distribuiti con licenza Creative Commons "
+"Attribution 4.0 International License "
+"https://creativecommons.org/licenses/by/4.0/"
+
+#: ../../intro.rst:21
+msgid "Purpose"
+msgstr "Scopo"
+
+#: ../../intro.rst:23
+msgid ""
+"The Lidar Tile Maker Plugin has been developed in order to make easier "
+"the use of the CHM from Lidar Plugin. The latter has been developed by "
+"Gter srl and funded by the 'Programma di sviluppo rurale per il Veneto "
+"2014-2020' - Regione del Veneto - Direzione AdG FEASR e Foreste. It "
+"allows to compute the Canopy Height Model (CHM) starting from Lidar data,"
+" in particular Digital Surface Model (DSM)  and Digital Terrain Model "
+"(DTM)."
+msgstr ""
+"Il Plugin Lidar Tile Maker Plugin è stato sviluppato per rendere più semplice "
+"l'utlizzo del Plugin CHM from LIDAR. Quest ultimo è stato sviluppato da "
+"Gter srl e finanziato dal 'Programma di sviluppo rurale per il Veneto "
+"2014-2020' - Regione del Veneto - Direzione AdG FEASR e Foreste. "
+"Permette di calcolare il Canopy Height Model (CHM) a partire da dati LIDAR,"
+" in particolare Digital Surface Model (DSM) e Digital Terrain Model "
+"(DTM)."
+
+#: ../../intro.rst:25
+msgid ""
+"The use of CHM from LIDAR plugin is based on a Tile Vector Layer which is"
+" automatically uploaded to the working Qgis project when the plugin icon "
+"is pressed. By default the tile vector layer, named "
+"**tile_dsm_dtm.gpkg**, contains data of Regione Veneto (Italy) which has "
+"founded its development. Obviously the **tile_dsm_dtm** layer can be "
+"modified by user including its own data."
+msgstr ""
+"L'utilizzo del Plugin CHM from LIDAR si basa su un Layer vettoriale di Tile che viene"
+" automaticamente caricato nel progetto Qgis corrente premendo l'icona del plugin "
+"Di default il layer vettoriale delle tile, nominato "
+"**tile_dsm_dtm.gpkg**, contiene i dati della Regione Veneto che ne ha "
+"finanziato lo sviluppo. Ovviamente il layer **tile_dsm_dtm** può essere "
+"modificato dall'utente inserendo i propri dati."
+
+#: ../../intro.rst:27
+msgid ""
+"The **Lidar Tile Maker** Plugin allows users to create their own Tile "
+"Vector Layer with all the characteristics requested by the CHM from LIDAR"
+" Plugin. For instance, the plugin creates a **tile_dsm_dtm.gpkg** with "
+"all the necessary information stored in the attribute table. The table "
+"fields are automatically created and named so as to be used by the CHM "
+"from LIDAR Plugin."
+msgstr ""
+"Il Plugin **Lidar Tile Maker** permette all'utente di creare il proprio Layer "
+"Vettoriale di Tile con tutte le caratteristiche richieste dal Plugin CHM from LIDAR"
+" Per esempio, il plugin crea un file **tile_dsm_dtm.gpkg** con "
+"tutte le informazioni necessarie immagazzinate nella tabella degli attributi. I campi "
+"della tabella sono creati automaticamente e nominati in modo da poter essere utilizzati dal Plugin "
+"CHM from LIDAR."
+
+#: ../../intro.rst:29
+msgid "The final output is a file GeoPackage (**tile_dsm_dtm.gpkg**)."
+msgstr "L'output finale è un file GeoPackage (**tile_dsm_dtm.gpkg**)."
+
+#: ../../intro.rst:33
+msgid "Glossary"
+msgstr "Glossario"
+
+#: ../../intro.rst:35
+msgid "CHM: Canopy Height Model"
+msgstr "CHM: Canopy Height Model"
+
+#: ../../intro.rst:36
+msgid "DSM: Digital Surface Model"
+msgstr "DSM: Digital Surface Model"
+
+#: ../../intro.rst:37
+msgid "DTM: Digital Terrain Model"
+msgstr "DTM: Digital Terrain Model"
+
+#: ../../intro.rst:38
+msgid "GIS: Geographic Information System"
+msgstr "GIS: Geographic Information System"
+
+#: ../../intro.rst:39
+msgid "LIDAR: Laser Imaging Detection and Ranging"
+msgstr "LIDAR: Laser Imaging Detection and Ranging"
+
