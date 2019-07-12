@@ -8,18 +8,17 @@ Installare sphinx-intl da cmd *pip install sphinx-intl*
 
 Per tradurre un progetto Readthedocs bisogna seguire i seguenti passaggi:
 
-* Per ogni lingua deve essere creato un nuovo progetto/repository github (es. lidar_tile_maker_manuale_it, lidar_tile_maker_manuale_es, lidar_tile_maker_manuale_de, ecc.), fare una copia del progetto/repository github nella lingua originaria
-* Dalla cartella del nuovo progetto/repository readthedocs lanciare tramite cmd *sphinx-build -b gettext . _build/gettext* il comando crea una cartella _build/gettext_ con all'interno i file .pot
-* Sempre dalla cartella del nuovo progetto/repository readthedocs lanciare tramite cmd *sphinx-intl update -p _build/gettext -l it -l de -l es* questo comando creerà una cartella _locales_ con dentro una cartella per ogni lingua che si è scelta, dentro alle singole cartelle delle lingue si trovano i file .po
+* Dalla cartella della repository github lanciare tramite cmd *sphinx-build -b gettext . _build/gettext* il comando crea una cartella _build/gettext_ con all'interno i file .pot
+* Sempre dalla cartella della repository github lanciare tramite cmd *sphinx-intl update -p _build/gettext -l it -l de -l es* questo comando creerà una cartella _locales_ con dentro una cartella per ogni lingua che si è scelta, dentro alle singole cartelle delle lingue si trovano i file .po
 * Aprire ogni file .po con un editor di testo e tradurre seguendo la sintassi
 
-  es.
-  msgid ""
-  "Read the Docs hosts documentation for the open source community."
-  "It supports :ref:`Sphinx <sphinx>` docs written with reStructuredText."
-  msgstr ""
-  "Read the Docs pubblica la documentazione per la comunità open source "
-  "Supporta documenti :ref:`Sphinx <sphinx>` scritti con reStructuredText."
+  es.<br>
+  msgid ""<br>
+  "Read the Docs hosts documentation for the open source community."<br>
+  "It supports :ref:`Sphinx <sphinx>` docs written with reStructuredTe<br>
+  msgstr ""<br>
+  "Read the Docs pubblica la documentazione per la comunità open source "<br>
+  "Supporta documenti :ref:`Sphinx <sphinx>` scritti con reStructuredText."<br>
 
 * Fare il build della traduzione, dalla cartella del nuovo progetto/repository readthedocs lanciare tramite cmd *sphinx-build -b html -D language=it . _build/html/it*
 * Da Readthedocs importare la repository con la traduzione come nuovo progetto
