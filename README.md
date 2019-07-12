@@ -28,6 +28,16 @@ Per tradurre un progetto Readthedocs bisogna seguire i seguenti passaggi:
 
 In questo modo comparirà nella versione in lingua originale del documento on line la possibilità di andare alla traduzione
 
+Qualora venissero fatte modifiche e/o aggiunte al testo in lingua originale (file .rst), è ovviamente possibile fare un update dei file della traduzione (.pot e .po):
+
+* Dalla cartella della repository github lanciare tramite cmd <br>
+  *sphinx-build -b gettext . _build/gettext* <br>
+  Con questo comando vengono aggiornati i file .pot<br>
+* Dalla cartella della repository github lanciare tramite cmd <br>
+  *sphinx-intl update -p _build/gettext -l it -l de -l es* <br>
+  Con questo comando vengono aggiornati i file .po, ovviamente le parti già tradotte e che non sono state modificate nella lingua originale vengono mantenute. Eventuali nuove righe di testo e parti modificate vengono invece aggiornate e si deve quindi procedere ad aggiungere la traduzione o modificare quella esistente.
+* Committare le modifiche su github
+
 NB. Se successivamente si volessero aggiungere nuove traduzioni bisogna rifare tutto il procedimento saltando però il primo step.
 
 **Link utili**
