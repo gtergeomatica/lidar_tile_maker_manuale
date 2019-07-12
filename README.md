@@ -20,14 +20,15 @@ Per tradurre un progetto Readthedocs bisogna seguire i seguenti passaggi:
   "Read the Docs pubblica la documentazione per la comunità open source "<br>
   "Supporta documenti :ref:`Sphinx <sphinx>` scritti con reStructuredText."<br>
 
-* Fare il build della traduzione, dalla cartella del nuovo progetto/repository readthedocs lanciare tramite cmd *sphinx-build -b html -D language=it . _build/html/it*
-* Da Readthedocs importare la repository con la traduzione come nuovo progetto
-* Dalla proprietà Admin di Readthedocs impostare come lingua quella della traduzione (es. italiano)
+* Committare il tutto su github nella repository del manuale
+* Da Readthedocs creare un nuovo progetto (uno per ogni lingua) importando la repository github del manuale (si deve fare con la modalità manuale dando come url il link alla repository github del manuale)
+* Dalla proprietà Admin del nuovo progetto Readthedocs impostare come lingua del progetto quella della traduzione (es. italiano)
 * Da Readthedocs fare il build
-* Da Readthedocs andare nel progetto in lingua originale e dalle proprietà Admin- Translation, impostare il progetto tradotto come traduzione 
-* Da Readthedocs fare il build
+* Da Readthedocs andare nel progetto in lingua originale e dalle proprietà Admin--Translation, impostare il progetto tradotto come traduzione 
 
 In questo modo comparirà nella versione in lingua originale del documento on line la possibilità di andare alla traduzione
+
+NB. Se successivamente si volessero aggiungere nuove traduzioni bisogna rifare tutto il procedimento saltando però il primo step.
 
 **Link utili**
 
