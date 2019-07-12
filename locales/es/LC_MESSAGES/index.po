@@ -20,9 +20,9 @@ msgstr ""
 
 #: ../../index.rst:7
 msgid "Manual: Lidar Tile Maker Plugin QGIS"
-msgstr ""
+msgstr "Manual: Complemento Lidar Tile Maker QGIS"
 
 #: ../../index.rst:8
 msgid "Subject:"
-msgstr ""
+msgstr "Tema:"
 
