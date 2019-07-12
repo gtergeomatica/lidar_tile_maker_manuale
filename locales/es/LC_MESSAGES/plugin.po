@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../../plugin.rst:2
 msgid "The Lidar Tile Maker Plugin"
-msgstr ""
+msgstr "El complemento Lidar Tile Maker"
 
 #: ../../plugin.rst:3
 msgid ""
@@ -38,103 +38,127 @@ msgid ""
 "data themselves. The fields of the attribute table of the "
 "*tile_dsm_dtm.gpkg* file are:"
 msgstr ""
-"The **Lidar Tile Maker** Plugin creates the tile vector layer, named "
-"*tile_dsm_dtm*, to be used as input for the CHM from LIDAR Plugin. As "
-"already mentioned in the introduction of the manual, the CHM from LIDAR "
-"plugin automatically uploads and uses the *tile_dsm_dtm* vector layer, "
-"which contains data of Regione Veneto, but it can be replaced with the "
-"one created by the **Lidar Tile Maker** Plugin. It creates a GeoPackage "
-"file, automatically named *tile_dsm_dtm.gpkg*, which contains the "
-"polygons of tiles computed from the extensions of the DTM/DSM file given "
-"by users as input. Also the related attribute table is automatically "
-"created with all the required fields and filled with all the necessary "
-"information taken from input parameters provided by users or from the "
-"data themselves. The fields of the attribute table of the "
-"*tile_dsm_dtm.gpkg* file are:"
+"El complemento **Lidar Tile Maker** crea una capa de teselas vectoriales, denominada "
+"*tile_dsm_dtm*, que se usará como entrada para el complemento CHM from LIDAR. Como "
+"ya se mencionó en la introducción de este manual, el complemento "
+"CHM from LIDAR carga y usa automáticamente la capa vectorial de *tile_dsm_dtm*, "
+"que contiene los datos de la región Veneto, pero ésta puede reemplazarse con la "
+"creada por el complemento **Lidar Tile Maker**. El Plugin crea un archivo "
+"GeoPackage, llamado automáticamente *tile_dsm_dtm.gpkg*, que contiene los "
+"polígonos de las teselas calculados a partir de las extensiones del archivo DTM/DSM dado "
+"por el usuario como entrada. Además la tabla de atributos relacionada es automáticamente "
+"creada con todos los campos requeridos y se llena con toda la "
+"información necesaria tomada de los parámetros de entrada proporcionados por el "
+"usuario o de los propios datos. Los campos de la tabla de atributos del archivo "
+"*tile_dsm_dtm.gpkg* son:"
 
 #: ../../plugin.rst:6
 msgid "ENTE - the authority given as input"
-msgstr ""
+msgstr "ENTE - la autoridad dada como entrada"
 
 #: ../../plugin.rst:7
 msgid "ANNO - the year given as input"
-msgstr ""
+msgstr "ANNO - el año dado como entrada"
 
 #: ../../plugin.rst:8
 msgid ""
 "FORMATO - the format file of the DSM/DTM file, it is automatically taken "
 "from the DSM/DTM file stored in the folders given as input"
 msgstr ""
+"FORMATO - el formato del archivo DSM/DTM, es automáticamente tomado "
+"desde el archivo DSM/DTM almacenado en las carpetas dadas como entrada"
 
 #: ../../plugin.rst:9
 msgid "SR_EPSG - the EPSG code of the DSM/DTM CRS given as input"
-msgstr ""
+msgstr "SR_EPSG - el código EPSG de DSM/DTM CRS dado como entrada"
 
 #: ../../plugin.rst:10
 msgid ""
 "P_BASE - the base path to the folder containing the DSM and DTM file (see"
 " section 'Data Preparation') taken from the DSM/DTM path given as input"
 msgstr ""
+"P_BASE - la ruta base a la carpeta que contiene los archivos DSM y DTM (consulte"
+" la sección 'Preparación de datos') tomada de la ruta DSM/DTM que se proporciona como entrada"
 
 #: ../../plugin.rst:11
 msgid ""
 "P_CAMPAGNA - the name of the folder of the flight campaign (see section "
 "'Data Preparation') taken from the DSM/DTM path given as input"
 msgstr ""
+"P_CAMPAGNA - el nombre de la carpeta de la campaña de vuelo o mapeo aéreo (ver sección "
+"'Preparación de datos') tomada de la ruta DSM/DTM que se proporciona como entrada"
 
 #: ../../plugin.rst:12
 msgid ""
 "P_DTM - the name of the folder containing the DTM file (see section 'Data"
 " Preparation') taken from the DTM path given as input"
 msgstr ""
+"P_DTM - el nombre de la carpeta que contiene el archivo DTM (ver sección 'Preparación"
+" de datos') tomada de la ruta DTM proporcionada como entrada"
 
 #: ../../plugin.rst:13
 msgid ""
 "P_DSM - the name of the folder containing the DSM file (see section 'Data"
 " Preparation') taken from the DSM path given as input"
 msgstr ""
+"P_DSM - el nombre de la carpeta que contiene el archivo DSM (ver sección 'Preparación"
+" de datos') tomada de la ruta DSM proporcionada como entrada"
 
 #: ../../plugin.rst:14
 msgid ""
-"N_DTM - the name of each DTM file automatically retrived from from the "
+"N_DTM - the name of each DTM file automatically retrived from the "
 "DTM path folder given as input"
 msgstr ""
+"N_DTM - el nombre de cada archivo DTM que se recupera aumotáticamente de la "
+"ruta de la carpeta DTM que se proporciona como entrada"
 
 #: ../../plugin.rst:15
 msgid ""
-"N_DSM - the name of each DSM file automatically retrived from from the "
+"N_DSM - the name of each DSM file automatically retrived from the "
 "DSM path folder given as input"
 msgstr ""
+"N_DSM - el nombre de cada archivo DSM que se recupera aumotáticamente de la "
+"ruta de la carpeta DSM que se proporciona como entrada"
 
 #: ../../plugin.rst:16
 msgid ""
 "P_CHM - this field will remain empty, it will be filled by the CHM from "
 "LIDAR Plugin with the path to the CHM file"
 msgstr ""
+"P_CHM - este campo permanecerá vacío, se completará desde "
+"el Plugin CHM from LIDAR con la ruta del archivo CHM"
 
 #: ../../plugin.rst:17
 msgid ""
 "N_CHM - this field will remain empty, it will be filled by the CHM from "
 "LIDAR Plugin with the name of the CHM file"
 msgstr ""
+"N_CHM - este campo permanecerá vacío, se completará desde "
+"el Plugin CHM from LIDAR con la ruta del archivo CHM"
 
 #: ../../plugin.rst:18
 msgid ""
 "EPSG_CHM - this field will remain empty, it will be filled by the CHM "
 "from LIDAR Plugin with the EPSG code of the CHM file CRS"
 msgstr ""
+"EPSG_CHM - este campo permanecerá vacío, se completará desde "
+"el Plugin CHM from LIDAR con el código EPSG del archivo CHM CRS"
 
 #: ../../plugin.rst:19
 msgid ""
 "RISOLUZ_RA - the resolution of the DSM and DTM file automatically "
 "retrived by the DSM/DTM file themselves"
 msgstr ""
+"RISOLUZ_RA - la resolución del archivo DSM y DTM automáticamente "
+"recuperada por el propio archivo DSM/DTM"
 
 #: ../../plugin.rst:21
 msgid ""
 "All the values stored in the attribute table will be then used by the CHM"
 " from LIDAR plugin."
 msgstr ""
+"Todos los valores almacenados en la tabla de atributos serán usados por el Plugin"
+" CHM from LIDAR."
 
 #: ../../plugin.rst:23
 msgid ""
@@ -142,6 +166,9 @@ msgid ""
 "from LIDAR plugin, DO NOT rename the file and the Qgis layer and DO NOT "
 "delete or rename any field of the related attribute table.**"
 msgstr ""
+"**NÓTESE BIEN. Para utilizar el archivo tile_dsm_dtm.gpkg como entrada para el complemento "
+"CHM from LIDAR, NO CAMBIE el nombre del archivo ni de la capa Qgis y NO "
+"ELIMINE o cambie el nombre de ningún campo de la tabla de atributos relacionada.**"
 
 #: ../../plugin.rst:25
 msgid ""
@@ -155,6 +182,15 @@ msgid ""
 " and DSM exist and if they have the same extension. Otherwise the tool "
 "returns a warning message."
 msgstr ""
+"Los datos DTM y DSM derivados del mapeo aéreo con LIDAR se dividen "
+"en teselas. El complemento **Lidar Tile Maker** calcula la extensión de "
+"cada DTM tile y de su relacionado DSM tile dados como entrada. Si las dos "
+"teselas, DTM y la relacionada DSM, tienen la misma extensión, el complemento crea "
+"el tile polygon. La salida final es una capa vectorial que contiene todos los "
+"polígonos correspondientes a la extensión de cada tesela DTM/DSM dada como "
+"entrada. El complemento crea la tesela de polígonos correspondiente solo si ambos DTM"
+" y DSM existen y si tienen la misma extensión. De lo contrario, la herramienta "
+"devuelve una advertencia."
 
 #: ../../plugin.rst:27
 msgid ""
