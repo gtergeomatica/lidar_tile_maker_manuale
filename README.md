@@ -32,7 +32,7 @@ Qualora venissero fatte modifiche e/o aggiunte al testo in lingua originale (fil
 
 * Dalla cartella della repository github lanciare tramite cmd <br>
   *sphinx-build -b gettext . _build/gettext* <br>
-  Con questo comando vengono aggiornati i file .pot<br>
+  Con questo comando vengono aggiornati i file .pot
 * Dalla cartella della repository github lanciare tramite cmd <br>
   *sphinx-intl update -p _build/gettext -l it -l de -l es* <br>
   Con questo comando vengono aggiornati i file .po, ovviamente le parti già tradotte e che non sono state modificate nella lingua originale vengono mantenute. Eventuali nuove righe di testo e parti modificate vengono invece aggiornate e si deve quindi procedere ad aggiungere la traduzione o modificare quella esistente.
