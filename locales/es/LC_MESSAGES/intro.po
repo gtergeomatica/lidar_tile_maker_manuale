@@ -20,21 +20,23 @@ msgstr ""
 
 #: ../../intro.rst:2
 msgid "Introduction"
-msgstr ""
+msgstr "Introducción"
 
 #: ../../intro.rst:5
 msgid "Credits"
-msgstr ""
+msgstr "Créditos"
 
 #: ../../intro.rst:8
 msgid "https://www.gter.it/"
-msgstr ""
+msgstr "https://www.gter.it/"
 
 #: ../../intro.rst:11
 msgid ""
 "The **Lidar Tile Maker** Plugin for QGIS and this related manual have "
 "been developed by Gter srl Innovazione in Geomatica GNSS e GIS."
 msgstr ""
+"El complemento **Lidar Tile Maker** para QGIS y este manual han "
+"sido desarrollados por Gter srl Innovazione in Geomatica GNSS e GIS."
 
 #: ../../intro.rst:15
 msgid ""
@@ -42,10 +44,13 @@ msgid ""
 "Attribution 4.0 International License "
 "https://creativecommons.org/licenses/by/4.0/"
 msgstr ""
+"Tanto el manual como el complemento están sujetos a la licencia de Creative Commons "
+"Attribution 4.0 International License "
+"https://creativecommons.org/licenses/by/4.0/"
 
 #: ../../intro.rst:21
 msgid "Purpose"
-msgstr ""
+msgstr "Propósito"
 
 #: ../../intro.rst:23
 msgid ""
@@ -57,6 +62,13 @@ msgid ""
 " in particular Digital Surface Model (DSM)  and Digital Terrain Model "
 "(DTM)."
 msgstr ""
+"El complemento Lidar Tile Maker ha sido desarrollado para facilitar "
+"el uso del complemento CHM from Lidar. Este último ha sido desarrollado por "
+"Gter srl y financiado por el 'Programma di sviluppo rurale per il Veneto "
+"2014-2020' - Regione del Veneto - Direzione AdG FEASR e Foreste. Éste "
+"permite calcular el modelo de altura del dosel (CHM) a partir de datos lidar,"
+" en particular el modelo de superficie digital (DSM) y el modelo de terreno digital "
+"(DTM)."
 
 #: ../../intro.rst:25
 msgid ""
@@ -67,6 +79,12 @@ msgid ""
 "founded its development. Obviously the **tile_dsm_dtm** layer can be "
 "modified by user including its own data."
 msgstr ""
+"El uso del complemento CHM from LIDAR se basa en una capa de teselas vectoriales que se"
+" carga automáticamente en el proyecto de Qgis en funcionamiento cuando el icono del Plugin "
+"se presiona. Por defecto la capa de teselas vectoriales, llamada "
+"**tile_dsm_dtm.gpkg**, contiene los datos de la región de Veneto (Italia) que se ha "
+"empleado para su desarrollo. Obviamente la capa **tile_dsm_dtm** puede ser "
+"modificada por el usuario incluyendo sus propios datos."
 
 #: ../../intro.rst:27
 msgid ""
@@ -77,32 +95,38 @@ msgid ""
 "fields are automatically created and named so as to be used by the CHM "
 "from LIDAR Plugin."
 msgstr ""
+"El complemento **Lidar Tile Maker** permite a los usuarios crear su propia capa de "
+"teselas vectoriales con todas las características requeridas por el CHM from LIDAR"
+" Plugin. Por ejemplo, el complemento crea un **tile_dsm_dtm.gpkg** con "
+"toda la información necesaria almacenada en la tabla de atributos. Los campos "
+"de la tabla se crean y nombran automáticamente para que puedan ser utilizados por el complemento "
+"CHM from LIDAR."
 
 #: ../../intro.rst:29
 msgid "The final output is a file GeoPackage (**tile_dsm_dtm.gpkg**)."
-msgstr ""
+msgstr "La salida final es un archivo GeoPackage (**tile_dsm_dtm.gpkg**)."
 
 #: ../../intro.rst:33
 msgid "Glossary"
-msgstr ""
+msgstr "Glosario"
 
 #: ../../intro.rst:35
 msgid "CHM: Canopy Height Model"
-msgstr ""
+msgstr "CHM: Modelo de altura del Dosel"
 
 #: ../../intro.rst:36
 msgid "DSM: Digital Surface Model"
-msgstr ""
+msgstr "DSM: Modelo de Superficie Digital"
 
 #: ../../intro.rst:37
 msgid "DTM: Digital Terrain Model"
-msgstr ""
+msgstr "DTM: Modelo de Terreno Digital"
 
 #: ../../intro.rst:38
 msgid "GIS: Geographic Information System"
-msgstr ""
+msgstr "GIS: Sistema de Información Geográfica"
 
 #: ../../intro.rst:39
 msgid "LIDAR: Laser Imaging Detection and Ranging"
-msgstr ""
+msgstr "LIDAR: Laser Imaging Detection and Ranging"
 
