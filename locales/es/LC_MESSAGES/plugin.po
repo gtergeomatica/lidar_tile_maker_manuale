@@ -124,7 +124,6 @@ msgstr ""
 "'Preparación de datos') tomada de la ruta DSM proporcionada como entrada"
 
 #: ../../plugin.rst:15
-#, fuzzy
 msgid ""
 "N_DTM - the name of each DTM file automatically retrived from from the "
 "DTM path folder given as input"
@@ -133,7 +132,6 @@ msgstr ""
 "la ruta de la carpeta DTM que se proporciona como entrada"
 
 #: ../../plugin.rst:16
-#, fuzzy
 msgid ""
 "N_DSM - the name of each DSM file automatically retrived from from the "
 "DSM path folder given as input"
