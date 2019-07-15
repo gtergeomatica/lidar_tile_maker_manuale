@@ -201,44 +201,56 @@ msgid ""
 "the tile polygons of each campaign to be used as input of the CHM from "
 "LIDAR plugin."
 msgstr ""
+"El complemento funciona para una sola campaña de vuelo LIDAR. En el caso de varias "
+"campañas, el plugin debe ejecutarse para cada campaña y creará "
+"el archivo de tésela vectorial correspondiente. Después, las capas de téselas vectoriales tienen que "
+"combinarse para obtener un archivo único *tile_dsm_dtm.gpkg* con todas "
+"las teselas de polígonos de cada campaña para usarlos como entrada del plugin CHM from "
+"LIDAR."
 
 #: ../../plugin.rst:29
 msgid "The main and mandatory input of the **Lidar Tile Maker** Plugin are:"
-msgstr ""
+msgstr "Las entradas principales y obligatorias del plugin **Lidar Tile Maker** son:"
 
 #: ../../plugin.rst:31
 msgid "the folder containing all the DSM file of the desired campaign"
-msgstr ""
+msgstr "La carpeta que contiene todos los archivos DSM de la campaña deseada"
 
 #: ../../plugin.rst:32
 msgid "the folder containing all the DTM file of the desired campaign"
-msgstr ""
+msgstr "La carpeta que contiene todos los archivos DTM de la campaña deseada"
 
 #: ../../plugin.rst:33
 msgid "the Coordinates Reference System (CRS) of the DTM/DSM file"
-msgstr ""
+msgstr "El sistema de Referencia de Coordenadas (CRS) del archivo DTM/DSM"
 
 #: ../../plugin.rst:34
 msgid ""
 "an output path folder where the plugin will save the final "
 "tile_dsm_dtm.gpkg file"
 msgstr ""
+"Una carpeta de ruta de salida donde el plugin guardará el archivo "
+"final tile_dsm_dtm.gpkg."
 
 #: ../../plugin.rst:36
 msgid ""
 "NB. The input DSM folder and the input DTM folder must belong to the same"
 " flight campaign."
 msgstr ""
+"NB. La carpeta DSM de entrada y la carpeta DTM de entrada deben pertenecer a la misma"
+" campaña de vuelo."
 
 #: ../../plugin.rst:38
 msgid ""
 "NB. If a tile_dsm_dtm.gpkg file already exists in the provided output "
 "folder, it will be automatically overwritten."
 msgstr ""
+"NB. Si ya existe un archivo tile_dsm_dtm.gpkg en la carpeta de salida provista, "
+"se sobreescribirá automáticamente."
 
 #: ../../plugin.rst:41
 msgid "Data Preparation"
-msgstr ""
+msgstr "Preparación de los datos"
 
 #: ../../plugin.rst:42
 msgid ""
@@ -249,6 +261,12 @@ msgid ""
 " by the CHM from LIDAR plugin to compute the CHM from the provided DSM "
 "and DTM."
 msgstr ""
+"Antes de ejecutar el plugin **Lidar Tile Maker**, los datos DSM y DTM deben de "
+"estar organizados en carpetas para permitir al plugin recuperar toda la "
+"información necesaria de la ruta de datos DSM y DTM para almacenarla en "
+"la capa de téselas vectoriales de la tabla de atributos. Esta información será entonces usada por"
+" el plugin CHM from LIDAR para calcular el CHM a partir del DSM y el DTM "
+"provistos."
 
 #: ../../plugin.rst:46
 msgid ""
@@ -261,6 +279,15 @@ msgid ""
 "(i.e. my_campaign). Obviously the campaign folder can be placed wherever "
 "(e.g C:\\\\Users\\\\user\\\\Documents\\\\whatever\\\\)."
 msgstr ""
+"Todos los datos DSM provenientes de una determinada campaña de vuelo (e.g my_campaign) "
+"deben almacenarse en una única carpeta con un nombre determinado (e.g dsm_folder). "
+"De la misma manera, todos los datos DTM provenientes de la misma campaña (e.g "
+"my_campaign) deben almacenarse en una única carpeta con un determinado nombre (e.g "
+"dtm_folder). Tanto la carpeta dsm_folder como la carpera dtm_folder deben de estar contenidas en "
+"otra carpeta cuyo nombre debe corresponder con el de la campaña "
+"(i.e. my_campaign). Obviamente la carpeta de la campaña se puede colocar en cualquier lugar "
+"(e.g C:\\\\Users\\\\user\\\\Documents\\\\whatever\\\\)."
+
 
 #: ../../plugin.rst:48
 msgid ""
@@ -278,10 +305,23 @@ msgid ""
 "fields of the attribute table (maned N_DSM and N_DTM), will be used by "
 "the CHM from LIDAR plugin to retrieve data from which compute the CHM."
 msgstr ""
+"La ruta a la carpeta de la campaña (i.e. "
+"C:\\\\Users\\\\user\\\\Documents\\\\whatever\\\\) se almacenará en el "
+"campo relacionado (denominado P_BASE) de la tabla de atributos del archivo "
+"*tile_dsm_dtm.gpkg*. El nombre de la carpeta de campaña (i.e. "
+"my_campaign) se almacenará en un campo específico de la tabla de atributos "
+"(denominado P_CAMPAGNA) mientras que el nombre de la carpeta que contiene los datos DSM "
+"(i.e. dsm_folder) y el nombre de la carpeta que contiene los datos DTM "
+"(i.e. dtm_folder) se almacenarán en dos campos diferentes de la tabla de"
+" atributos respectivamente denominados P_DSM y P_DTM. Al unir los valores de los "
+"tres campos se obtendrá la ruta a los archivos DSM y DTM. Estas rutas "
+"combinadas con los nombres de los archivos DSM y DTM, respectivamente almacenados en dos "
+"campos de la tabla de atributos (llamados N_DSM y N_DTM), serán usados por el "
+"plugin CHM from LIDAR para recuperar los datos a partir de los cuales se calcula el CHM."
 
 #: ../../plugin.rst:51
 msgid "Graphical User Interface"
-msgstr ""
+msgstr "Interfaz Gráfica del Usuario"
 
 #: ../../plugin.rst:52
 msgid ""
@@ -289,6 +329,9 @@ msgid ""
 "graphical user interface (GUI) of the **Lidar Tile Maker** Plugin that is"
 " shown pressing its icon in the toolbar."
 msgstr ""
+"Los usuarios pueden proporcionar todos los parámetros de entrada requeridos a través de "
+"la interfaz gráfica de usuario (GUI) de el plugin **Lidar Tile Maker**, que se"
+" muestra al presionar su icono en la barra de herramientas."
 
 #: ../../plugin.rst:56
 msgid ""
@@ -299,6 +342,12 @@ msgid ""
 "message, the process will be stopped and the user will be able to provide"
 " the input DSM folder."
 msgstr ""
+"**1 - Input DSM folder:** seleccione la carpeta que contiene todos los archivos DSM "
+"de la campaña deseada con el botón Browse. Una vez seleccionada, la ruta a "
+"la carpeta deseada se mostrará en el widget de texto de línea relacionado. NB."
+" Si no se proporciona una carpeta DSM de entrada, el plugin devolverá un mensaje de error, "
+"el proceso se detendrá y el usuario podrá proporcionar"
+" la carpeta DSM de entrada."
 
 #: ../../plugin.rst:57
 msgid ""
@@ -309,6 +358,12 @@ msgid ""
 "message, the process will be stopped and the user will be able to provide"
 " the input DTM folder."
 msgstr ""
+"**2 - Input DTM folder:** seleccione la carpeta que contiene todos los archivos DTM "
+"de la campaña deseada usando el botón Browse. Una vez seleccionada, la ruta a "
+"la carpeta deseada se mostrará en el widget de texto de línea relacionado. NB."
+" Si no se proporciona una carpeta DTM de entrada, el plugin devolverá un mensaje de error, "
+"el proceso se detendrá y el usuario podrá proporcionar"
+" la carpeta DTM de entrada."
 
 #: ../../plugin.rst:58
 msgid ""
@@ -319,6 +374,12 @@ msgid ""
 "provide the DSM/DTM CRS. NB. Be careful to select the right CRS, "
 "otherwise the final result may be incorrect."
 msgstr ""
+"**3 - DSM/DTM CRS:** el botón abre el cuadro de diálogo de selección Qgis CRS y "
+"y debe seleccionarse el CRS del archivo DSM/DTM. Este parámetro es "
+"obligatorio, si no se proporciona DSM/DTM CRS, el plugin devolverá un mensaje"
+" de error, el proceso se detendrá y el usuario podrá "
+"proporcionar el DSM/DTM CRS. NB. Tenga cuidado de seleccionar el CRS correcto, "
+"de lo contrario el resultado final puede ser muy incorrecto."
 
 #: ../../plugin.rst:59
 msgid ""
@@ -328,6 +389,11 @@ msgid ""
 "but it is requested for using the *tile_dsm_dtm* layer as input of the "
 "CHM from LIDAR plugin."
 msgstr ""
+"**4 - Authority:** indique el nombre del autor del mapeo LIDAR "
+"en el widget de texto de línea. Esta información se almacenará automáticamente "
+"relacionado de la tabla de atributos. No es obligatorio, "
+"pero se solicita para usar la capa *tile_dsm_dtm* como entrada del "
+"plugin CHM from LIDAR."
 
 #: ../../plugin.rst:60
 msgid ""
@@ -336,6 +402,10 @@ msgid ""
 " attribute table. It is not mandatory but it is requested for using the "
 "*tile_dsm_dtm* layer as input of the CHM from LIDAR plugin."
 msgstr ""
+"**5 - Year:** Indica el año en el que se realizó el mapo LIDAR. "
+"Esta información se almacenará automáticamente en el campo relacionao de la"
+" tabla de atributos. No es obligatorio, pero se solicita para usar la "
+"capa *tile_dsm_dtm* como entrada del plugin the CHM from LIDAR."
 
 #: ../../plugin.rst:61
 msgid ""
@@ -347,6 +417,13 @@ msgid ""
 " able to provide the output folder. Be careful to not use spaces and/or "
 "special characters in th output folder name and path."
 msgstr ""
+"**6 - Tile Output folder:** seleccione la carpeta en la que se "
+"guardará el archivo final *tile_dsm_dtm.gpkg* usando el botón Browse. Una vez "
+"seleccionado, la ruta a la carpeta seleccionada se mostrará en el widget "
+"de texto de línea relacionado. NB. Si no se proporciona una carpeta de salida, el plugin devolverá "
+"un mensaje de error, el proceso se detendrá y el usuario podrá"
+" proporcionar la carpeta de salida. Tenga cuidado de no utilizar espacios y/o "
+"caracteres especiales en el nombre y la ruta de la carpeta de salida."
 
 #: ../../plugin.rst:62
 msgid ""
@@ -356,22 +433,31 @@ msgid ""
 "the output *tile_dsm_dtm.gpkg* file will be created using the same CRS of"
 " the DSM/DTM."
 msgstr ""
+"**7 - Vector Tile CRS:** el botón abre el diálogo de selección de Qgis CRS "
+"y se puede seleccionar el CRS de la tesela vectorial de salida. A diferencia del DSM/DTM"
+" CRS, este parámetro no es obligatorio. Si no se selecciona ningun vector tile CRS "
+"el archivo de salida *tile_dsm_dtm.gpkg* se creará utilizando el mismo CRS del"
+" DSM/DTM."
 
 #: ../../plugin.rst:63
 msgid ""
 "**8 - Log messages area:** all the warning and error messages will be "
 "shown in this text area during the process."
 msgstr ""
+"**8 - Log messages area:** todos los mensajes de advertencia y error se "
+"mostrarán en este área de texto durante el proceso."
 
 #: ../../plugin.rst:64
 msgid ""
 "**9 - Clear Log:** the button cleans the Log area removing messages "
 "related to a previous process."
 msgstr ""
+"**9 - Clear Log:** el botón limpia el área de registro y elimina los mensajes "
+"relacionados con un proceso anterior."
 
 #: ../../plugin.rst:65
 msgid "**10 - Help:** the button opens this manual in a web browser."
-msgstr ""
+msgstr "**10 - Help:** el botón abre este manual en un navegador web."
 
 #: ../../plugin.rst:66
 msgid ""
@@ -380,16 +466,22 @@ msgid ""
 "able to provide or modify the input parameters, then the process will "
 "restart pressing again the OK button."
 msgstr ""
+"**11- OK:** el botón ejecuta el proceso. Como ya se ha mencionado, si la "
+"herramienta devuelve un mensaje de error, el proceso se detendrá y el usuario podrá "
+"proporcionar o modificar los parámetros de entrada, luego el proceso se "
+"reiniciará presionando nuevamente el botón OK."
 
 #: ../../plugin.rst:67
 msgid ""
 "**12 - Close:** the button closes the GUI and all the input parameters "
 "will be reinitialized."
 msgstr ""
+"**12 - Close:** el botón cierra la GUI y todos los parámetros de entrada "
+"se reiniciarán."
 
 #: ../../plugin.rst:70
 msgid "Example"
-msgstr ""
+msgstr "Ejemplo"
 
 #: ../../plugin.rst:72
 msgid ""
@@ -404,14 +496,24 @@ msgid ""
 "P_CAMPAGNA will be obviously the same while the name of the folder "
 "containing the DTM file '*\\\\DTM*' will be stored in the P_DTM field)."
 msgstr ""
+"Los archivos DSM y DTM se almacenan respectivamente en una carpeta llamada DSM y en "
+"la carpeta llamada DTM. La ruta para la carpeta DSM es "
+"'C:\\\\Users\\\\user\\\\Documents\\\\dataset\\\\campaign_1\\\\DSM', donde"
+" '*C:\\\\Users\\\\user\\\\Documents\\\\dataset\\\\*' es la ruta base "
+"que se almacenará en el campo P_BASE, '*campaign_1*' es la carpeta "
+"de la campaña de vuelo y se almacenará en el campo P_CAMPAGNA y "
+"'*\\\\DSM*' es el nombre de la carpeta que contiene el archivo DSM y se"
+" almacenará en el campo P_DSM (del mismo modo para el DTM, P_BASE y "
+"P_CAMPAGNA serán obviamente iguales, mientras que el nombre de la carpeta "
+"que contiene el archivo DTM '*\\\\DTM*' se almacenará en el campo P_DTM)."
 
 #: ../../plugin.rst:76
 msgid "Set input parameters from the **Lidar Tile Maker** Plugin GUI"
-msgstr ""
+msgstr "Configure los parámetros de entrada desde la GUI de ** Lidar Tile Maker **"
 
 #: ../../plugin.rst:80
 msgid "Press 'OK' button"
-msgstr ""
+msgstr "Presione el botón 'OK'"
 
 #: ../../plugin.rst:84
 msgid ""
@@ -419,6 +521,9 @@ msgid ""
 " plugin returns a warning message to advise user that the DSM/DTM CRS "
 "will be used for the *tile_dsm_dtm.gpkg* file"
 msgstr ""
+"En este caso ningún CRS para la capa de teselas vectoriales ha sido seleccionado por lo tanto el"
+" plugin devolverá una advertencia para avisar al usuario que el DSM/DTM CRS "
+"que se empleará se sacará del archivo *tile_dsm_dtm.gpkg*"
 
 #: ../../plugin.rst:86
 msgid ""
@@ -428,6 +533,11 @@ msgid ""
 "automatically filled with the values retrived from the input parameters "
 "and the file themselves."
 msgstr ""
+"El resultado final es una capa vectorial llamada tile_dsm_dtm con la tesela "
+"de polígonos correspondiente a la extension de cada archivo DSM/DTM encontrados en las"
+" carpetas DSM y DTM dadas como entrada. La tabla de atributos ha sido "
+"automáticamente llenada con los valores devueltos de los parámetros de entrada "
+"y del archivo."
 
 #: ../../plugin.rst:90
 msgid ""
@@ -439,4 +549,11 @@ msgid ""
 "from LIDAR plugin. Just load it in the working QGIS project befour "
 "pressing the icon of the the CHM from LIDAR plugin."
 msgstr ""
+"**NB.** Como mencionó anteriormente, el complemento/plugin **Lidar Tile Maker** funciona para una"
+" sola campaña de vuelo/mapeo aéreo. Si se tienen varias campañas debe de ejecutar "
+"el plugin para cada una de ellas y luego fusionar el "
+"*tile_dsm_dtm.gpkg* obtenido. La salida del proceso de combinación debe de ser"
+" un archivo GeoPackage denominado *tile_dsm_dtm.gpkg* y puede emplearse como entrada del plugin "
+"CHM from LIDAR plugin. Simlemente carguelo en el proyecto de trabajo de QGIS antes de "
+"presionar el icono del plugin CHM from LIDAR."
 
