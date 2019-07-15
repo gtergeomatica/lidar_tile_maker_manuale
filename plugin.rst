@@ -6,6 +6,7 @@ It creates a GeoPackage file, automatically named *tile_dsm_dtm.gpkg*, which con
 * ENTE - the authority given as input
 * ANNO - the year given as input
 * FORMATO - the format file of the DSM/DTM file, it is automatically taken from the DSM/DTM file stored in the folders given as input
+* COMPRESSIO - this field is created only because it is used by the CHM from LIDAR plugin to check if input DSM/DTM file are compressed or not. By default the Lidar Tile Maker Plugin set the value of this field to 'no'. In fact the Lidar Tile Maker Plugin **works only with uncompressed file**. If the user wants to compress file (only .zip format is supported), it has to create a zip file for each DSM and DTM file and save the DSM zip file and the DTM zip file respectively in the DSM folder and in the DTM folder (see. section about Data Preparation.). The file compression has to be done after running the Lidar Tile Maker Plugin. Then the user has to manually edit the attribute table of the resulting *tile_dsm_dtm.gpkg* changing the value of the COMPRESSIO field from 'no' to 'zip' for each row whose DSM/DTM file have been compressed.
 * SR_EPSG - the EPSG code of the DSM/DTM CRS given as input
 * P_BASE - the base path to the folder containing the DSM and DTM file (see section 'Data Preparation') taken from the DSM/DTM path given as input
 * P_CAMPAGNA - the name of the folder of the flight campaign (see section 'Data Preparation') taken from the DSM/DTM path given as input
